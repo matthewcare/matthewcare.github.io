@@ -29,11 +29,8 @@ h2 {
 	font-size: 150%;
 }
 
-footer {
-	clear: both;
-}
-
 .legal {
+	clear: both;
 	float: right;
 }
 
