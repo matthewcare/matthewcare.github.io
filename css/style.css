@@ -2,13 +2,12 @@ body {
 	color: black;
 	font: 14px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: #FFFFFF;
+	min-width: 400px;
 }
 
 h1 {
 	font-size: 3em;
 }
-
-
 
 #container {
 	max-width: 760px;
@@ -19,4 +18,10 @@ h1 {
 	height: 30em;
 	float: left;
 	padding: 0 2em 0 0;
+}
+
+@media (max-width: 480px) {
+	#profilePicture { 
+		height: 15em; 
+	}
 }
