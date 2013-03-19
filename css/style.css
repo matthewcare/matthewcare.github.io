@@ -3,10 +3,21 @@ body {
 	font: 14px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: #FFFFFF;
 	min-width: 400px;
+	margin: 4em;
+}
+
+a {
+	text-decoration: none;
+	color: #0000E5;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 h1 {
 	font-size: 3em;
+	margin: 0 0 0.5em 0;
 }
 
 #container {
@@ -17,10 +28,15 @@ h1 {
 #profilePicture {
 	height: 30em;
 	float: left;
+	clear: left;
 	padding: 0 2em 0 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 760px) {
+	body {
+		margin: 1.5em;
+		font-size: 12px;
+	}
 	#profilePicture { 
 		height: 15em; 
 	}
