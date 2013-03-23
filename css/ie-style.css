@@ -1,0 +1,48 @@
+body {
+	color: black;
+	font: 14px/1.6 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #FFFFFF;
+	min-width: 400px;
+	margin: 4em;
+}
+
+a {
+	text-decoration: none;
+	color: #0000E5;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 300%;
+	margin: 0 0 0.5em 0;
+}
+
+h1 a, h1 a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+.legal {
+	clear: both;
+	float: right;
+}
+
+#container {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+#profilePicture {
+	height: 30em;
+	float: left;
+	clear: left;
+	padding: 0 2em 0 0;
+	margin-bottom: 1em;
+}
