@@ -40,12 +40,49 @@ h2 {
 }
 
 #profilePicture {
-	height: 30em;
+	max-width: 40%;
 	float: left;
-	clear: left;
-	padding: 0 2em 0 0;
-	margin-bottom: 1em;
+	padding: 0;
+	margin: 0 2em 1em 0;
 }
+
+@media (min-width: 550px) {
+
+	#profilePicture:hover {
+    	-webkit-animation: profilePicture 1s 1s ease alternate forwards;
+	}
+}
+
+@-webkit-keyframes profilePicture  /* Safari and Chrome */
+{
+	0% {-webkit-transform: matrix(1,0,0,1,0,0);}
+	100% {-webkit-transform: matrix(1.5,0,0,1.5,210,0);}
+}
+
+@keyframes profilePicture
+{
+	0% {transform: matrix(1,0,0,1,0,0);}
+	100% {transform: matrix(1.5,0,0,1.5,210,0);}
+}
+
+@-moz-keyframes profilePicture /* Firefox */
+{
+	0% {-moz-transform: matrix(1,0,0,1,0px,0px);}
+	100% {-moz-transform: matrix(1.5,0,0,1.5,210px,0px);}
+}
+
+@-o-keyframes profilePicture /* Opera */
+{
+	0% {-o-transform: matrix(1,0,0,1,0,0);}
+	100% {-o-transform: matrix(1.5,0,0,1.5,210,0);}
+}
+
+@-ms-keyframes profilePicture /* Internet Explorer */
+{
+	0% {-o-transform: matrix(1,0,0,1,0,0);}
+	100% {-o-transform: matrix(1.5,0,0,1.5,210,0);}
+}
+
 
 @media (max-width: 760px) {
 	body {
