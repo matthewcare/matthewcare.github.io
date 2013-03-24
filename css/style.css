@@ -76,12 +76,15 @@ h2 {
 @media (min-width: 550px) {
 
 	#profilePicture:hover {
-    	animation: profilePicture 1s 1s ease forwards;
-    	-webkit-animation: profilePicture 1s 1s ease forwards;
-    	-moz-animation: profilePicture 1s 1s ease forwards;
-    	-o-animation: profilePicture 1s 1s ease forwards;
+    	animation: profilePicture 1s ease 1s 1 forwards;
+    	-webkit-animation: profilePicture 1s ease 1s 1 forwards;
+    	-moz-animation: profilePicture 1s ease 1s 1 forwards;
+    	-o-animation: profilePicture 1s ease 1s 1 forwards;
 	}
 }
+
+
+/*Syntax animation: name duration timing-function delay iteration-count direction;*/
 
 @keyframes fadeIn { 
 	from { opacity:0; } 
@@ -98,23 +101,28 @@ h2 {
 
 
 @keyframes profilePicture {
-	0% {transform: matrix(1,0,0,1,0,0);}
-	100% {transform: matrix(1.5,0,0,1.5,210,0);}
+	from {transform: matrix(1,0,0,1,0,0);}
+	to {transform: matrix(1.5,0,0,1.5,210,0);
+		box-shadow: 10px 10px 10px #777;}
 }
 
 @-webkit-keyframes profilePicture {
-	0% {-webkit-transform: matrix(1,0,0,1,0,0);}
-	100% {-webkit-transform: matrix(1.5,0,0,1.5,210,0);}
+	from {-webkit-transform: matrix(1,0,0,1,0,0);}
+	to {-webkit-transform: matrix(1.5,0,0,1.5,210,0);
+		box-shadow: 10px 10px 10px #777;
+		}
 }
 
 @-moz-keyframes profilePicture {
-	0% {-moz-transform: matrix(1,0,0,1,0px,0px);}
-	100% {-moz-transform: matrix(1.5,0,0,1.5,210px,0px);}
+	from {-moz-transform: matrix(1,0,0,1,0px,0px);}
+	to {-moz-transform: matrix(1.5,0,0,1.5,210px,0px);
+		box-shadow: 10px 10px 10px #777;}
 }
 
 @-o-keyframes profilePicture {
-	0% {-o-transform: matrix(1,0,0,1,0,0);}
-	100% {-o-transform: matrix(1.5,0,0,1.5,210,0);}
+	from {-o-transform: matrix(1,0,0,1,0,0);}
+	to {-o-transform: matrix(1.5,0,0,1.5,210,0);
+		box-shadow: 10px 10px 10px #777;}
 }
 
 @media (max-width: 760px) {
