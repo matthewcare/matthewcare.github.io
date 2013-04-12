@@ -35,27 +35,31 @@ h2 {
 .fadeIn {
  	opacity:0;  
  	visibility: hidden;
+    animation: fadeIn ease-in 1s forwards;
     -webkit-animation: fadeIn ease-in 1s forwards; 
     -moz-animation: fadeIn ease-in 1s forwards;
-    animation: fadeIn ease-in 1s forwards;
+    -o-animation: fadeIn ease-in 1s forwards;
 }
 
 .fadeIn.one {
+	animation-delay: 1s;
 	-webkit-animation-delay: 1s;
 	-moz-animation-delay: 1s;
-	animation-delay: 1s;
+	-o-animation-delay: 2s;
 }
 
 .fadeIn.two {
+	animation-delay: 1.5s;
 	-webkit-animation-delay: 1.5s;
 	-moz-animation-delay: 1.5s;
-	animation-delay: 1.5s;
+	-o-animation-delay: 2s;
 }
 
 .fadeIn.three {
+	animation-delay: 2s;
 	-webkit-animation-delay: 2s;
 	-moz-animation-delay: 2s;
-	animation-delay: 2s;
+	-o-animation-delay: 2s;
 }
 
 #container {
@@ -104,6 +108,11 @@ footer {
 	to { opacity:1; visibility: visible;} 
 }
 @-moz-keyframes fadeIn { 
+	from { opacity:0; visibility: hidden;} 
+	to { opacity:1; visibility: visible;} 
+}
+
+@-o-keyframes fadeIn { 
 	from { opacity:0; visibility: hidden;} 
 	to { opacity:1; visibility: visible;} 
 }
