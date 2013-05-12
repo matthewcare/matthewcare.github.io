@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="A lightweight, easily customisable pure CSS menu.">
+        <meta name="author" content="Matthew Care">
+        <title>Dropdown Menu</title>
+        <link rel="stylesheet" href="css/common.css" type="text/css" />
+        <!--[if IE]>
+        <link rel="stylesheet" href="css/strippedDropdown.css" type="text/css"/>
+        <![endif]-->
+        <!--[if !IE]><!-->
+        <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
+        <!--<![endif]-->  
+        <link rel='shortcut icon' href="../../images/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="container">
+
+            <header>
+                <h1><a href="../../index.html">matthewcare.co.uk</a></h1>
+            </header>
+
+            <div class="content">
+                <h2><a href="../css-projects.html">Projects</a> &gt; <a href="dropdown.html">Dropdown</a></h2>
+                <p>A simple pure CSS drop down menu. I've implemented it within a nav, since I'd imagine it would mostly be used for navigation, but you can easily change it to suit your needs. This example uses CSS3 aimations, and borders. The HTML can get a bit messy, but it's easy once you understand it.</p>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Smarties</a>
+                            <ul>
+                                <li><a href="#">I don't go anywhere</a>
+                                    <ul>
+                                        <li><a href="#">I lied :(</a>
+                                            <ul>
+                                                <li><a href="#">I actually go for a while</a>
+                                                    <ul>
+                                                        <li><a href="#">See</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">I can go off the page though</a></li>
+                                                <li><a href="#">So don't nest too much</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">I go to many places</a>
+                                    <ul>
+                                        <li><a href="#">Such as here</a></li>
+                                        <li><a href="#">And here</a></li>
+                                        <li><a href="#">And here as well!</a></li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li><a href="#">Are</a>
+                            <ul>
+                                <li><a href="#">I fell down :(</a>
+                                    <ul>
+                                        <li><a href="#">I scraped my knee</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">I should be studying...</a>
+                                    <ul>
+                                        <li><a href="#">Maybe tomorrow</a></li>
+                                        <li><a href="#">Tea time!</a></li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Pretty</a>
+                            <ul>
+                                <li><a href="#">I just dropped down</a>
+                                    <ul>
+                                        <li><a href="#">Peek-a-boo</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Oh hi there</a>
+                                    <ul>
+                                        <li><a href="#">I live in the shadows</a></li>
+                                    </ul>
+                                </li>
+                            </ul> 
+                        </li>
+
+                        <li><a href="#">Good</a>
+                            <ul>
+                                <li><a href="#">Need more tea....</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <p>This text is here so that you can see that the dropdown items don't effect anything else on the page, and because the hidden elements have visibility set to hidden, screen readers won't read them out. If you want, you can <a href="css/dropdown.css">view the CSS</a> for the dropdown, it is commented so you can see what things do. Or you can take a look at a <a href="css/strippedDropdown.css">stripped down</a> version of the CSS that doesn't include transitions or borders (used for Internet Explorer).</p>
+
+
+            </div>
+
+
+            <footer>
+                <p class="legal"><small>&copy; Matthew Care</small></p>
+            </footer>
+
+        </div>
+    </body>
+</html>

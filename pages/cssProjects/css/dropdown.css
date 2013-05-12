@@ -1,0 +1,89 @@
+nav { 
+    background: #444444;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 120%;
+    border-radius: 4px;
+}
+
+nav a, nav a:hover {
+    text-decoration: none;
+}
+
+nav ul, nav li { 
+    list-style: none; 
+    padding:0; 
+    margin:0; 
+    display:inline-block; 
+}
+
+nav ul li {  
+    position: relative;
+}
+
+nav ul li a { 
+    display:block; 
+    padding: 1em; 
+    white-space:nowrap; 
+    border-radius:3px;
+    color: #fff
+}
+
+nav ul ul li a {
+    padding: 0.5em;
+}
+
+nav ul li:hover { 
+    background:#222;
+}
+
+nav ul ul { 
+    position: absolute; 
+    opacity: 0; 
+    visibility: hidden;
+    background: #333; 
+    padding: 0.2em;
+    border:1px solid #444; 
+    border-top: none; 
+    box-shadow: #111 0 3px 4px;
+    border-bottom-left-radius:6px; 
+    border-bottom-right-radius:6px; 
+}
+
+nav ul ul ul {
+    left: 100%;
+    border-radius:6px;
+    border:1px solid #444;
+}
+
+nav ul li:hover>ul { 
+    position: absolute; 
+    left:0; 
+    animation: fadeIn ease-in 0.3s forwards;
+    -webkit-animation: fadeIn ease-in 0.3s forwards; 
+    -moz-animation: fadeIn ease-in 0.3s forwards;
+    -o-animation: fadeIn ease-in 0.3s forwards;
+}
+
+nav ul ul li:hover>ul { 
+    top: 0; 
+    left:100%; 
+}
+
+@keyframes fadeIn { 
+    0% { opacity:0; visibility: hidden;} 
+    100% { opacity:1; visibility: visible;} 
+}
+@-webkit-keyframes fadeIn { 
+    from { opacity:0; visibility: hidden;} 
+    to { opacity:1; visibility: visible;} 
+}
+@-moz-keyframes fadeIn { 
+    from { opacity:0; visibility: hidden;} 
+    to { opacity:1; visibility: visible;} 
+}
+@-o-keyframes fadeIn { 
+    from { opacity:0; visibility: hidden;} 
+    to { opacity:1; visibility: visible;} 
+}
