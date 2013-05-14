@@ -13,30 +13,28 @@ nav a, nav a:hover {
 }
 
 nav ul, nav li { 
-    list-style: none; 
-    padding:0; 
-    margin:0; 
-    display:block; 
+    padding: 0; 
+    margin: 0; 
+    display: block; 
+    border-radius: 6px;
 }
 
 nav ul li {  
     position: relative;
-    border-radius: 6px;
-}
-
-nav ul li a { 
-    display:block; 
-    padding: 1em; 
-    white-space:nowrap; 
-    border-radius:3px;
-}
-
-nav ul ul li a {
-    padding: 0.5em;
 }
 
 nav ul li:hover { 
     background:#222;
+}
+
+nav ul li a { 
+    display: block; 
+    padding: 1em; 
+    white-space: nowrap; 
+}
+
+nav ul ul li a {
+    padding: 0.5em;
 }
 
 nav ul ul { 
@@ -45,32 +43,17 @@ nav ul ul {
     visibility: hidden;
     background: #333; 
     padding: 0.2em;
-    border:1px solid #444; 
-    border-top: none; 
+    border: 1px solid #444; 
     box-shadow: #111 0 3px 4px;
-    border-top-right-radius:6px; 
-    border-bottom-right-radius:6px; 
-}
-
-nav ul ul ul {
-    left: 100%;
-    border-radius:6px;
-    border:1px solid #444;
 }
 
 nav ul li:hover>ul { 
-    position: absolute; 
     top: 0;
     left:100%; 
     animation: fadeIn ease-in 0.3s forwards;
     -webkit-animation: fadeIn ease-in 0.3s forwards; 
     -moz-animation: fadeIn ease-in 0.3s forwards;
     -o-animation: fadeIn ease-in 0.3s forwards;
-}
-
-nav ul ul li:hover>ul { 
-    top: 0; 
-    left:100%; 
 }
 
 @keyframes fadeIn { 

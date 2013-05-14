@@ -12,18 +12,21 @@ nav a, nav a:hover {
 }
 
 nav ul, nav li { 
-    list-style: none; 
-    padding:0; 
-    margin:0; 
-    display:block; 
+    padding: 0; 
+    margin: 0; 
+    display: block; 
 }
 
 nav ul li {  
     position: relative;
 }
 
+nav ul li:hover { 
+    background: #222;
+}
+
 nav ul li a { 
-    display:block; 
+    display: block; 
     padding: 1em; 
     white-space:nowrap; 
 }
@@ -32,32 +35,15 @@ nav ul ul li a {
     padding: 0.5em;
 }
 
-nav ul li:hover { 
-    background:#222;
-}
-
 nav ul ul { 
     position: absolute; 
     display: none;
     background: #333; 
-    padding: 0.2em;
     border:1px solid #444; 
-    border-top: none; 
-}
-
-nav ul ul ul {
-    left: 100%;
-    border:1px solid #444;
 }
 
 nav ul li:hover>ul { 
-    position: absolute; 
     top: 0;
-    left:100%; 
+    left: 100%;
     display: block;
-}
-
-nav ul ul li:hover>ul { 
-    top: 0; 
-    left:100%; 
 }
