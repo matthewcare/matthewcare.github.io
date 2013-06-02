@@ -1,6 +1,7 @@
 var counter = 0;
 var limit = 5;
 var childCounter = 1;
+var inputBoxCounter = 1;
 
 function addTopLevel(){
      if (counter == limit)  {
@@ -27,15 +28,17 @@ function addInputAndButton(insertLocation, anchorId, level) {
      newBtn.setAttribute('onclick', 'addSubLevel("topLevel' + (counter + 1) + '", "topLevelInput'+ (counter + 1) +'")');
 
      newInputField.setAttribute('type', 'text');
-     newInputField.setAttribute('onkeyup', 'copyText("inputBox' + (counter + 1) + '", "' + anchorId + '")');
-     newInputField.setAttribute('id', 'inputBox' + (counter + 1));
+     newInputField.setAttribute('onkeyup', 'copyText("inputBox' + inputBoxCounter + '", "' + anchorId + '")');
+     newInputField.setAttribute('id', 'inputBox' + inputBoxCounter);
 
-     newInput.innerHTML = level + (counter + 1) + ": ";
+     newInput.innerHTML = level + " " + (counter + 1) + ": ";
      newInput.setAttribute('id', 'topLevelInput' + (counter + 1) + 'box');
 
      newInput.appendChild(newInputField)
      newInput.appendChild(newBtn);
      insertLocation.appendChild(newInput);    
+
+     inputBoxCounter++;
 }
 
 function createList(elementId, insertLocation){
