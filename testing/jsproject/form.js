@@ -43,9 +43,7 @@ function addInputAndButton(insertLocation, anchorId, level) {
 
 function createList(elementId, insertLocation){
      var newList = document.createElement('li');
-               console.log(insertLocation)
      var insertLocation = document.getElementById(insertLocation)
-
      newList.setAttribute('id', elementId);
      insertLocation.appendChild(newList);
      createAnchor(elementId);
