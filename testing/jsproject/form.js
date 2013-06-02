@@ -9,32 +9,40 @@ function addTopLevel(){
      else {
           var buttonValue = document.getElementById('addFieldBtn');
           buttonValue.setAttribute('value', 'Add another field');
-          addInputAndButton('formInputs', 'anchortopLevel'+ (counter + 1));
+          addInputAndButton('formInputs', 'anchortopLevel'+ (counter + 1), 'Top Level');
           createList('topLevel'+ (counter + 1), 'mainList')
           counter++;   
      }
 }
 
-function addInputAndButton(insertLocation, anchorId) {
+function addInputAndButton(insertLocation, anchorId, level) {
      var newInput = document.createElement('p');
      var newBtn = document.createElement('input');
      var insertLocation = document.getElementById(insertLocation);
+     var newInputField = document.createElement('input');
 
      newBtn.setAttribute('type', 'button');
      newBtn.setAttribute('value', 'Add sub level');
-     newBtn.setAttribute('id', 'topLevel' + (counter + 1) + 'subLevel1');
-     newBtn.setAttribute('onclick', 'addSubLevel("topLevel' + (counter + 1) + 'subLevel1", "topLevel'+ (counter + 1) +'")');
+     newBtn.setAttribute('id', 'subLevelButton' + (counter + 1));
+     newBtn.setAttribute('onclick', 'addSubLevel("topLevel' + (counter + 1) + '", "topLevelInput'+ (counter + 1) +'")');
 
-     newInput.innerHTML = "Top level " + (counter + 1) + ": " + "<input type='text' id='inputBox"+ (counter + 1) + "'>";
-     newInput.setAttribute('id', 'topLevelInput' + (counter + 1));
-     newInput.setAttribute('onkeyup', 'copyText("inputBox' + (counter + 1) + '", "' + anchorId + '")');
+     newInputField.setAttribute('type', 'text');
+     newInputField.setAttribute('onkeyup', 'copyText("inputBox' + (counter + 1) + '", "' + anchorId + '")');
+     newInputField.setAttribute('id', 'inputBox' + (counter + 1));
+
+     newInput.innerHTML = level + (counter + 1) + ": ";
+     newInput.setAttribute('id', 'topLevelInput' + (counter + 1) + 'box');
+
+     newInput.appendChild(newInputField)
      newInput.appendChild(newBtn);
      insertLocation.appendChild(newInput);    
 }
 
 function createList(elementId, insertLocation){
      var newList = document.createElement('li');
+               console.log(insertLocation)
      var insertLocation = document.getElementById(insertLocation)
+
      newList.setAttribute('id', elementId);
      insertLocation.appendChild(newList);
      createAnchor(elementId);
@@ -51,19 +59,19 @@ function createAnchor(elementId){
 
 function addSubLevel(buttonId, parentId){
      var checkNoChildren = document.createElement('ul');
-     var level = document.getElementById(parentId);
-     checkNoChildren.setAttribute('id', 'ul' + parentId);
+     var level = document.getElementById(buttonId);
+     checkNoChildren.setAttribute('id', 'ul' + buttonId);
+
      if (level.children.length < 2) {
           level.setAttribute('id', parentId);
           level.appendChild(checkNoChildren);
-          createList('sub' + childCounter, 'ul' + parentId);
-          addInputAndButton(buttonId);
+          createList('sub' + childCounter, 'ul' + buttonId);
+          addInputAndButton(parentId + 'box',  'anchorsub'+ childCounter, 'Sub Level');
           childCounter++;
      }
      else {
-          createList('sub' + childCounter, 'ul' + parentId);
-          addInputAndButton(buttonId);
-          console.log(parentId)
+          createList('sub' + childCounter, 'ul' + buttonId);
+          addInputAndButton(parentId + 'box', 'anchorsub'+ childCounter, 'Sub Level');
           childCounter++
      }
 }
