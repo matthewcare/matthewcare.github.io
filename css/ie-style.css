@@ -30,13 +30,21 @@ h2 {
 }
 
 footer {
-	padding: 0.5em 0 0 0;
 	clear: both;
+	color: #fff;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	min-width: 400px;
+	width: 100%;
+	background: #333;
+	z-index: 2;
 }
 
-.legal {
-	clear: both;
-	float: right;
+footer p {
+	padding: 0.5em 3em 0.5em 0;
+	margin: 0;
+    text-align: right;
 }
 
 #container {
