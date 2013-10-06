@@ -15,8 +15,8 @@ var analyser = null;
 
 
 function convertToMono( input ) {
-    var splitter = audioContext.createChannelSplitter(2),
-    	merger = audioContext.createChannelMerger(2);
+    var splitter = AudioContext.createChannelSplitter(2),
+    	merger = AudioContext.createChannelMerger(2);
 
     input.connect( splitter );
     splitter.connect( merger, 0, 0 );
@@ -40,10 +40,10 @@ function getUserMedia(dictionary, callback) {
 
 function gotStream(stream) {
     // Create an AudioNode from the stream.
-    var mediaStreamSource = audioContext.createMediaStreamSource(stream);
+    var mediaStreamSource = AudioContext.createMediaStreamSource(stream);
 
     // Connect it to the destination.
-    analyser = audioContext.createAnalyser();
+    analyser = AudioContext.createAnalyser();
     analyser.fftSize = 2048;
     convertToMono( mediaStreamSource ).connect( analyser );
     updatePitch();
