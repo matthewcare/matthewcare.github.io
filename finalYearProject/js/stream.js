@@ -9,16 +9,15 @@ var stream = {
     audioContext: null,
     localStream: null,
     animationFrameId: null,
-    tracks: null,
     buffer: null,
     bufferLength: 1024,
     MINVAL: 134,
     noteStrings: ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"],
-    detectorElem: document.getElementById('detector'),
-    pitchElem: document.getElementById('pitch'),
-    noteElem: document.getElementById('note'),
-    detuneElem: document.getElementById('cents'),
-    detuneAmount: document.getElementById('centAmount'),
+    detectorElement: document.getElementById('detector'),
+    pitchElement: document.getElementById('pitch'),
+    noteElement: document.getElementById('note'),
+    centElement: document.getElementById('cent'),
+    centAmountElement: document.getElementById('centAmountElement'),
 
     startMedia: function () {
         this.audioContext = new webkitAudioContext();
@@ -32,9 +31,7 @@ var stream = {
 
     gotStream: function (localStream) {
         this.localStream = localStream;
-        // Create an AudioNode from the localStream.
         var mediaStreamSource = this.audioContext.createMediaStreamSource(localStream);
-        // Connect it to the destination.
         this.analyser = this.audioContext.createAnalyser();
         this.analyser.fftSize = 2048;
         mediaStreamSource.connect(this.analyser);
@@ -130,26 +127,26 @@ var stream = {
         }
 
         if (numberOfCycles === 0) {
-            this.pitchElem.innerText = "--";
-            this.noteElem.innerText = "-";
-            this.detuneElem.className = "";
-            this.detuneAmount.innerText = "--";
+            this.pitchElement.innerText = "--";
+            this.noteElement.innerText = "-";
+            this.centElement.className = "";
+            this.centAmountElement.innerText = "--";
 
         } else {
-            this.pitchElem.innerText = Math.floor(pitch);
+            this.pitchElement.innerText = Math.floor(pitch);
             var note =  this.noteFromPitch(pitch),
-                detune = this.centsOffFromPitch(pitch, note);
-            this.noteElem.innerText = this.noteStrings[note % 12];
-            if (detune === 0) {
-                this.detuneElem.className = "";
-                this.detuneAmount.innerText = "--";
+                cent = this.centsOffFromPitch(pitch, note);
+            this.noteElement.innerText = this.noteStrings[note % 12];
+            if (cent === 0) {
+                this.centElement.className = "";
+                this.centAmountElement.innerText = "--";
             } else {
-                if (detune < 0) {
-                    this.detuneElem.className = "flat";
+                if (cent < 0) {
+                    this.centElement.className = "flat";
                 } else {
-                    this.detuneElem.className = "sharp";
+                    this.centElement.className = "sharp";
                 }
-                this.detuneAmount.innerText = Math.abs(detune);
+                this.centAmountElement.innerText = Math.abs(cent);
             }
         }
 
