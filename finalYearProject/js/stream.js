@@ -17,7 +17,7 @@ var stream = {
     pitchElement: document.getElementById('pitch'),
     noteElement: document.getElementById('note'),
     centElement: document.getElementById('cent'),
-    centAmountElement: document.getElementById('centAmountElement'),
+    centAmountElement: document.getElementById('centAmount'),
 
     startMedia: function () {
         this.audioContext = new webkitAudioContext();
