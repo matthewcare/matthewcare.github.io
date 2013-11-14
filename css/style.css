@@ -29,6 +29,25 @@ h2 {
 	font-size: 150%;
 }
 
+audio {
+	display: block;
+	margin: 1em auto;
+}
+
+.download {
+	text-align: center;
+}
+
+.download a {
+	padding: 1em;
+}
+
+#mattew {
+	display: block;
+	max-width: 80%;
+	margin: 2em auto;
+}
+
 .fadeIn {
  	opacity:0;  
  	visibility: hidden;
