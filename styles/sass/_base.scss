@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cf:after, {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p {
+    color: $primary-color;
+    font-size: 1.2em;
+    padding-top: 1em;
+}
+
+@include paragraphs(1em);
+
+a {
+    text-decoration: none;
+    &:hover {
+        color: $link-hover;
+        @include transition(all, 0.2s, ease-in-out);
+    }
+}
+
+header {
+    height: 15em;
+    background: url(/img/hero-overlay.png), url(/img/hero.jpg) no-repeat;
+    background-position: center;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    div {
+        max-width: $max-width;
+        margin: 0 1em;
+    }
+    p {
+        color: $secondary-color;
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        color: $secondary-color;
+        font-size: 1.5em;
+    }
+}
+
+nav {
+    max-width: $max-width;
+    margin: 0 1em;
+    padding: 3em 0 1.5em 0;
+    h1 {
+        float: left;
+    }
+    h1 a {
+        font-weight: 900;
+        font-size: 1em;
+        color: $secondary-color;
+    }
+    ul {
+        clear: left;
+        list-style-type: none;
+        li {
+            font-size: 0.7em;
+            display: inline-block;
+            padding-right: 1em;
+        }
+    }
+    .social {
+        margin-top: 0.5em;
+        clear: none;
+        float: right;
+        padding-right: 0;
+        padding-left: 1em;
+        text-align: right;
+        width: auto;
+        display: none;
+        font-size: 1.5em;
+    }
+}
+
+section, footer > div {
+    max-width: $max-width;
+    margin: 0 1em;
+    p {
+        text-align: justify;
+    }
+}
+
+#first {
+    background: #C2D7E3;
+    img {
+        float: right;
+        width: 60%;
+        margin-left: 1em;
+        display: none;
+        margin: 4em 0 4em 2em;
+    }
+}
+
+#second {
+    background: #7bb9de;
+    p {
+        
+        color: #f4f4f4;
+    }
+    a {
+        color: #51595E;
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    ul {
+        padding-top: 1em;
+        font-size: 1.2em;
+        list-style-type: none;
+    }
+}
+
+footer {
+    background: #51595E;
+    p {
+        color: $secondary-color;
+    }
+    ul {
+        margin: 0.5em 0;
+        list-style-type: none;
+        li {
+            padding: 0.5em 0;
+            font-size: 0.7em;
+        }
+    }
+    a {
+        color: $secondary-color;
+        font-size: 1.5em;
+    }
+    .social {
+        width: auto;
+        display: none;
+        font-size: 1em;
+        span {
+            font-size: 2em;
+            width: 50px;
+        }
+    }
+}

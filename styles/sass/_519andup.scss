@@ -1,0 +1,37 @@
+@media only screen and (min-width: 519px) {
+    
+    @include paragraphs(3em);
+
+    header {
+        height: 25em;
+        p {
+            font-size: 1.8em;
+        }
+        div {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    nav {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3em 0 1.5em 0;
+        h1 {
+            font-size: 3em;
+        }
+        ul li {
+            font-size: 1em;
+        }
+    }
+
+    body > div, footer {
+        padding: 2em 0;
+    }
+
+    section, footer > div {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+

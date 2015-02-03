@@ -1,0 +1,26 @@
+@media only screen and (min-width: 960px) {
+
+    @include paragraphs(2em);
+
+    section, footer > div {
+        width: 85%;
+        margin: 0 auto;
+    }
+    nav {
+        width: 85%;
+    }
+    header {
+        div {
+            width: 85%;
+        }
+    }
+
+    #first {
+        img {
+            margin-top: 0;
+            margin-bottom: 0;
+            min-width: 500px;
+        }
+    }
+
+}
