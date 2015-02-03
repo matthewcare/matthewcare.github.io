@@ -132,7 +132,7 @@ footer {
         color: $secondary-color;
     }
     ul {
-        margin: 0.5em 0;
+        padding: 0.5em 0;
         list-style-type: none;
         li {
             padding: 0.5em 0;
@@ -145,7 +145,6 @@ footer {
     }
     .social {
         width: auto;
-        display: none;
         font-size: 1em;
         span {
             font-size: 2em;
