@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="jw-script.js">
+  <link rel="stylesheet" href="js-style.css">
+  </head>
+<body>
+
+<input placeholder="Video source" type="text" id="video-source">
+<button id="enter-video-sourece">Enter</button>
+
+<div id="player" class="jwplayer jw-reset jw-skin-seven jw-stretch-uniform jw-state-paused jw-flag-user-inactive" tabindex="0" style="width: 100%; height: 100%;">
+    <div class="jw-aspect jw-reset"></div>
+    <div class="jw-media jw-reset"><object type="application/x-shockwave-flash" data="http://www.adhqmedia.com/js/jw/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="player_swf_0" name="player_swf_0" class="jw-swf jw-reset" style="display: block; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="wmode" value="opaque"><param name="menu" value="false"></object></div>
+    <div class="jw-preview jw-reset"></div>
+    <div class="jw-captions jw-captions-enabled jw-reset" style="font-size: 33px;"><div class="jw-captions-window jw-reset"><span class="jw-captions-text jw-reset" style="color: rgb(255, 255, 255); font-family: Arial, sans-serif; text-shadow: rgb(0, 0, 0) -2px 0px 1px, rgb(0, 0, 0) 2px 0px 1px, rgb(0, 0, 0) 0px -2px 1px, rgb(0, 0, 0) 0px 2px 1px, rgb(0, 0, 0) -1px 1px 1px, rgb(0, 0, 0) 1px 1px 1px, rgb(0, 0, 0) 1px -1px 1px, rgb(0, 0, 0) 1px 1px 1px; background-color: rgba(0, 0, 0, 0);"></span></div></div><div class="jw-title jw-reset" style="display: none;">
+        <div class="jw-title-primary jw-reset"></div>
+        <div class="jw-title-secondary jw-reset"></div>
+    </div>
+    <div class="jw-overlays jw-reset"><div id="player_jwpsrv" class="jw-plugin jw-reset"><div class="afs_ads" style="width: 1px; height: 1px; position: absolute; background: transparent;">&nbsp;</div></div></div>
+    <div class="jw-controls jw-reset"><div class="jw-display-icon-container jw-background-color jw-reset">
+    <div class="jw-icon jw-icon-display jw-button-color jw-reset"></div>
+</div><div class="jw-controls-right jw-reset"><div class="jw-dock jw-reset">
+</div></div><div class="jw-controlbar jw-background-color jw-reset"><div class="jw-group jw-controlbar-left-group jw-reset"><div class="jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-playback"></div><div class="jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-prev" style="display: none;"></div><div class="jw-icon jw-icon-tooltip jw-icon-playlist jw-button-color jw-reset jw-hidden"><div class="jw-overlay jw-reset"></div></div><div class="jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-next" style="display: none;"></div><span class="jw-text jw-reset jw-text-elapsed">00:00</span></div><div class="jw-group jw-controlbar-center-group jw-reset"><div class="jw-slider-time jw-background-color jw-reset jw-slider-horizontal jw-reset">
+    <div class="jw-slider-container jw-reset">
+        <div class="jw-rail jw-reset"></div>
+        <div class="jw-buffer jw-reset" style="width: 23%;"></div>
+        <div class="jw-progress jw-reset" style="width: 0.0194212%;"></div>
+        <div class="jw-knob jw-reset" style="left: 0.0194212%;"></div>
+    <div class="jw-icon jw-icon-tooltip jw-tooltip-time jw-button-color jw-reset"><div class="jw-overlay jw-reset"><div class="jw-time-tip jw-background-color jw-reset"><div class="jw-reset" style="width: 0px; height: 0px;"></div><span class="jw-text jw-reset"></span></div></div></div></div>
+</div><span class="jw-text jw-reset jw-text-alt"></span></div><div class="jw-group jw-controlbar-right-group jw-reset"><span class="jw-text jw-reset jw-text-duration">41:11</span><div class="jw-icon jw-icon-tooltip jw-icon-hd jw-button-color jw-reset"><div class="jw-overlay jw-reset"><ul class="jw-menu jw-background-color jw-reset">
+        <li class="jw-text jw-option jw-item-0 jw-reset">360p</li>
+        <li class="jw-text jw-option jw-item-1 jw-reset">720p</li>
+        <li class="jw-text jw-option jw-item-2 jw-reset jw-active-option">1080p</li>
+</ul></div></div><div class="jw-icon jw-icon-tooltip jw-icon-cc jw-button-color jw-reset jw-hidden jw-off"><div class="jw-overlay jw-reset"></div></div><div class="jw-icon jw-icon-tooltip jw-icon-audio-tracks jw-button-color jw-reset jw-hidden"><div class="jw-overlay jw-reset"></div></div><div class="jw-icon jw-icon-tooltip jw-icon-more jw-button-color jw-reset jw-hidden"><div class="jw-overlay-horizontal jw-reset"></div></div><div class="jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-volume"></div><div class="jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-cast jw-off" style="display: none;"></div><div class="jw-slider-volume jw-background-color jw-reset jw-slider-horizontal jw-reset">
+    <div class="jw-slider-container jw-reset">
+        <div class="jw-rail jw-reset"></div>
+        <div class="jw-buffer jw-reset"></div>
+        <div class="jw-progress jw-reset" style="width: 90%;"></div>
+        <div class="jw-knob jw-reset" style="left: 90%;"></div>
+    </div>
+</div><div class="jw-icon jw-icon-tooltip jw-icon-volume jw-button-color jw-reset"><div class="jw-overlay jw-reset"><div class="jw-slider-volume jw-volume-tip jw-background-color jw-reset jw-slider-vertical jw-reset">
+    <div class="jw-slider-container jw-reset">
+        <div class="jw-rail jw-reset"></div>
+        <div class="jw-buffer jw-reset"></div>
+        <div class="jw-progress jw-reset" style="height: 90%;"></div>
+        <div class="jw-knob jw-reset" style="bottom: 90%;"></div>
+    </div>
+</div></div></div><div class="jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-fullscreen"></div></div></div></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+<script>
+  $('#enter-video-source').on('click', function () {
+
+                jwplayer('player').setup({
+                    width: '100%',
+                    height: "100%",
+                    fallback: 'false',
+                    autostart: 'false',
+                                        primary: "html5",
+                                        captions: {
+                        color: '#fff',
+                        backgroundOpacity: 0,
+                        fontSize: 25,
+                        edgeStyle: 'uniform'
+                    },
+                    sources: [
+                                                {
+                            file: $('#video-source').val(),
+                            label: "Video Source",
+                            type: "mp4"
+                        }                    ]
+                });
+            }
+
+        }
+    </script>
+  
+
+</body>
+</html>
