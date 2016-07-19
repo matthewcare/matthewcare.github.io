@@ -22,7 +22,10 @@
       jwplayer('player').setup({
           width: '100%',
           height: "100%",
-          file: $('#video-source').val()
+          sources:[{
+            file: $('#video-source').val(),
+            type: "mp4"
+          }]
       });
   })
 
