@@ -19,28 +19,14 @@
 <script>
   $('#enter-video-source').on('click', function () {
 
-                jwplayer('player').setup({
-                    width: '100%',
-                    height: "100%",
-                    fallback: 'false',
-                    autostart: 'false',
-                                        primary: "flash",
-                                        captions: {
-                        color: '#fff',
-                        backgroundOpacity: 0,
-                        fontSize: 25,
-                        edgeStyle: 'uniform'
-                    },
-                    sources: [
-                                                {
-                            file: $('#video-source').val(),
-                            label: "Video Source",
-                            type: "mp4"
-                        }                    ]
-                });
-            })
+      jwplayer('player').setup({
+          width: '100%',
+          height: "100%",
+          file: $('#video-source').val()
+      });
+  })
 
-    </script>
+</script>
   
 
 </body>
