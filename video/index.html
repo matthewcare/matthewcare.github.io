@@ -9,8 +9,8 @@
 
 <input placeholder="Video source" type="text" id="video-source">
 <button id="enter-video-source">Enter</button>
-
-<div id="player" class="jwplayer jw-reset jw-skin-seven jw-stretch-uniform jw-state-paused jw-flag-user-inactive" tabindex="0" style="width: 500px; height: 500px; position: relative;">
+<div style="height: 500px; width: 500px;"
+<div id="player" class="jwplayer jw-reset jw-skin-seven jw-stretch-uniform jw-state-paused jw-flag-user-inactive" tabindex="0" style="width: 100%; height: 100%x; position: relative;">
     <div class="jw-aspect jw-reset"></div>
     <div class="jw-media jw-reset"><object type="application/x-shockwave-flash" data="http://www.adhqmedia.com/js/jw/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="player_swf_0" name="player_swf_0" class="jw-swf jw-reset" style="display: block; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"><param name="allowfullscreen" value="true"><param name="allowscriptaccess" value="always"><param name="wmode" value="opaque"><param name="menu" value="false"></object></div>
     <div class="jw-preview jw-reset"></div>
@@ -60,7 +60,7 @@
                     height: "100%",
                     fallback: 'false',
                     autostart: 'false',
-                                        primary: "html5",
+                                        primary: "flash",
                                         captions: {
                         color: '#fff',
                         backgroundOpacity: 0,
