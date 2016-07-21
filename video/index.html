@@ -26,7 +26,7 @@
             preload: "auto",
             sources:[{
               file: src,
-              type: "mp4"
+              type: src.indexOf("youtube") != -1 ? "" : "mp4"
             }]
         });
     }
