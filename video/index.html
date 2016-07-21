@@ -18,17 +18,22 @@
 
 <script>
   $(function () {
-    $('#enter-video-source').on('click', function () {
-
-        jwplayer('player').setup({
+    
+    function loadVideo(src) {
+      jwplayer('player').setup({
             width: '100%',
             height: "100%",
             sources:[{
-              file: $('#video-source').val(),
-              type: "mp4"
+              file: src,
+              type: "mp4",
+              preload: "auto"
             }]
         });
-    })
+    }
+    
+    $('#enter-video-source').on('click', function () {
+          loadVideo($('#video-source').val())
+    });
     
     function getUrlVars() {
         var vars = [], hash;
@@ -45,17 +50,8 @@
     var query = getUrlVars()["url"];
     (function () {
       if (query) {
-        jwplayer('player').setup({
-            width: '100%',
-            height: "100%",
-            sources:[{
-              file: query,
-              type: "mp4"
-            }]
-        });
-        
+        loadVideo(query);
       }
-      
     })()
     
   })
